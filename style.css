@@ -1,0 +1,115 @@
+:root {
+    font-family: "Open Sans", sans-serif;
+}
+
+* {
+    margin: 0;
+}
+
+/* Mobile first Ansatz */
+body {
+    background-color: #282b28;
+}
+
+
+header, footer {
+    background: black; color: white;
+    position: sticy;
+    z-index: 100;
+}
+header {
+    text-align: center;
+    top: 0px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+main {
+    --rand: 0.5rem;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 1rem;
+   margin-bottom: 95px;
+}
+
+main > figure {
+    width: 80vw;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative; /* damit die Kinder absolut gesetzt werden können*/
+}
+
+main > figure > figcaption {
+    position: absolute;
+    left: var(--rand);
+    bottom: var(--rand);
+    background-color: rgba(128, 128, 128, 0.555);
+    color: white;
+    font-weight: bold;
+    padding: 0.125rem;
+}
+
+main > figure > i {
+    position: absolute;
+    right: var(--rand);
+    bottom: var(--rand);
+    color: green;
+    font-weight: bold;
+    font-size: 1.25em;
+    padding: 0.125rem;
+}
+
+main > figure > img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+}
+
+footer {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+footer > button {
+    font-size: 1.25em;
+    background: transparent;
+    border: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+footer > button:last-child {
+    background: red;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+    
+    main {
+        overflow: scroll;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-auto-rows: min-content;
+        padding: 1rem;
+       
+        margin-bottom: 100px;
+    }
+
+    main > figure {
+        width: unset;
+    }
+}
