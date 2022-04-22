@@ -56,7 +56,7 @@ give impressions of flex & grid
 
 ### Contact
 
-Mail: <dennis.piecha25@gmail@gmail.com><br>
+Mail: <dennis.piecha25@gmail.com><br>
 GitHub: [DennisPiecha](https://github.com/DennisPiecha)<br>
 
 ---
